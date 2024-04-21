@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Navbar from './Components/Navbar';
 
 function App() {
   const [recipeList, setRecipeList] = useState([]);
@@ -8,7 +9,7 @@ function App() {
         const url = 'https://tasty.p.rapidapi.com/recipes/list';
         const queryParams = new URLSearchParams({
           from: '0',
-          size: '20',
+          size: '5',
           tags: 'dairy_free,vegan' // Add the tags parameter
         });
 
@@ -34,15 +35,17 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-       <h2>NoDairyDelish</h2>
-       <div>
-        {recipeList.map(recipe => (
-            <p key={recipe.id}>{recipe.name}</p>
-        ))}
+    <div>
+      <Navbar />
+      <div className="flex flex-col justify-center items-center mt-10">
+        <div>
+        <div className="flex gap-4">
+          {recipeList.map(recipe => (
+              <p key={recipe.id}>{recipe.name}</p>
+          ))}
+        </div>
+        </div>
        </div>
-      </header>
     </div>
   );
 }
