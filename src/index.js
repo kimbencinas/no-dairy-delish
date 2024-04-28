@@ -9,6 +9,7 @@ import Meals from './Pages/Meals';
 import Ingredients from './Pages/Ingredients';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
+import Account from './Pages/Account'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <Contact />
+  },
+  {
+    path: '/account',
+    element: <Account />
   }
 ]);
 
