@@ -4,13 +4,21 @@ import { Link } from 'react-router-dom';
 function Navbar() {
 
   return (
-    <div className="flex flex-row bg-gray-200 p-5 gap-8 justify-end">
+<div className="flex flex-row bg-emerald-200 justify-between p-5">
+      <div className="flex gap-4">
         <h2>NoDairyDelish</h2>
+        <input
+            type="text"
+            placeholder="Search..."
+        />
+      </div>
+      <div className="flex flex-row gap-8">
         <Link to="/meals">Meals</Link>
         <Link to="/ingredients">Ingredients</Link>
         <Link to="/about">About Us</Link>
         <Link to="/contact">Contact Us</Link>
         <Link to="/account">Account</Link>
+      </div>
     </div>
   );
 }

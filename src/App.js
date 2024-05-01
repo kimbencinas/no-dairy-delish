@@ -38,13 +38,14 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-col justify-center items-center mt-10">
-        <div>
-        <div className="flex gap-4">
-          {recipeList.map(recipe => (
-              <p key={recipe.id}>{recipe.name}</p>
-          ))}
-        </div>
+      <div className="flex flex-col justify-center items-center mt-20">
+        <div className="flex flex-col gap-6">
+          <h2 className="text-center text-3xl font-bold">Recipes</h2>
+          <div className="flex gap-4">
+            {recipeList.map(recipe => (
+                <p key={recipe.id}>{recipe.name}</p>
+            ))}
+          </div>
         </div>
        </div>
     </div>
