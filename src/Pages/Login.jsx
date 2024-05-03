@@ -1,8 +1,11 @@
 import React from 'react';
+import Navbar from '../Components/Navbar';
 
 function Login() {
 
   return (
+    <div>
+    <Navbar />
     <div className="main-container flex items-center justify-center h-screen">
         <div className="bg-green-200 p-4 rounded-xl">
             <h2 className="text-center">Log In</h2>
@@ -34,6 +37,7 @@ function Login() {
                 </div>
             </form>
         </div>
+    </div>
     </div>
   );
 }

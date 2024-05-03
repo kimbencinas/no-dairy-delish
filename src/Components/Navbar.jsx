@@ -6,7 +6,7 @@ function Navbar() {
   return (
 <div className="flex flex-row bg-emerald-200 justify-between p-5">
       <div className="flex gap-4">
-        <h2>NoDairyDelish</h2>
+        <Link to="/">NoDairyDelish</Link>
         <input
             type="text"
             placeholder="Search..."
