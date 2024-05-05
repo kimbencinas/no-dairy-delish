@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Components/Navbar';
-import Feed from './Components/Feed';
 import './App.css';
 
 function App() {
@@ -47,7 +46,6 @@ function App() {
                 <p key={recipe.id}>{recipe.name}</p>
             ))}
           </div>
-          <Feed />
         </div>
        </div>
     </div>

@@ -10,6 +10,7 @@ function Navbar() {
         <input
             type="text"
             placeholder="Search..."
+            className="rounded-xl p-1 focus:outline-none focus:ring focus-border-purple-500"
         />
       </div>
       <div className="flex flex-row gap-8">
