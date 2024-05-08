@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CDropdown, CDropdownMenu, CDropdownToggle, CDropdownItem } from '@coreui/react';
 
 function Navbar() {
 
@@ -21,6 +22,7 @@ function Navbar() {
         <Link to="/account">Account</Link>
       </div>
     </div>
+    
   );
 }
 
