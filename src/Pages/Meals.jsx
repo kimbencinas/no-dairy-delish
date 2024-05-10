@@ -35,14 +35,16 @@ function Meals() {
   return (
     <div>
       <Navbar />
-      <div>
-        <h2>Vegan Recipes</h2>
-        {feedList.map((recipe, index) => (
-          <div key={index}>
-            <img src={recipe.image} alt={recipe.title} />
-            <p>{recipe.title}</p>
-          </div>
-        ))}
+      <div className="container mx-auto">
+        <h2 className="font-semibold text-center text-2xl mt-10">Vegan Recipes</h2>
+        <div className="flex flex-wrap justify-center items-center gap-10 p-4">
+          {feedList.map((recipe, index) => (
+            <div key={index}>
+              <img src={recipe.image} alt={recipe.title} className="w-48" />
+              <p className="text-center w-52">{recipe.title}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
