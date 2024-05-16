@@ -6,10 +6,10 @@ function About() {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-col justify-center items-center">
-        <h2>About Us</h2>
-        <div>
-          <p>
+      <div className="flex flex-col justify-center items-center p-10 bg-white">
+        <h2 className="text-3xl font-bold mb-10">About Us</h2>
+        <div className="text-gray-500 text-lg">
+          <p className="mb-4">
           Welcome to NoDairyDelish! I'm Kimberly, the developer behind this app, and I'm thrilled to share my journey with you.
           </p>
           <p>
