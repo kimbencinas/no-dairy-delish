@@ -7,7 +7,8 @@ function Ingredients() {
   return (
     <div>
       <Navbar />
-      <Feed />
+      <div>
+      </div>
     </div>
   );
 }
