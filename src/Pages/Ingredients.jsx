@@ -36,6 +36,7 @@ function Ingredients() {
     <div>
       <Navbar />
       <div>
+        
       </div>
     </div>
   );
