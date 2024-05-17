@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Navbar from '../Components/Navbar';
 
 function Contact() {
-  const [firstName, setFirstName] = useState('');
+  /* const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+*/
 
   return (
     <div>
@@ -15,17 +16,15 @@ function Contact() {
         <div className="flex flex-col">
           <form className="bg-white shadow-md rounded px-4">
             <div className="mb-4">
-              <label className="block">FIRST NAME
+              <label className="block text-black">FIRST NAME
                 <input
                   type="text"
-                  value={firstName}
                   className="shadow border rounded"
                 />
               </label>
               <label className="block">LAST NAME
                 <input
                   type="text"
-                  value={lastName}
                   className="shadow border rounded"
                 />
               </label>
@@ -33,13 +32,11 @@ function Contact() {
             <label className="block">EMAIL
               <input  
                 type="text"
-                value={email}
                 className="shadow border rounded"
               />
             </label>
             <label className="block">MESSAGE
               <textarea
-                value={message}
                 className="shadow border rounded"
               />
             </label>
