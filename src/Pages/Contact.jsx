@@ -9,38 +9,49 @@ function Contact() {
 */
 
   return (
-    <div>
+    <div className="bg-gray-200">
       <Navbar />
-      <div>
-        <h2>Contact Us</h2>
-        <div className="flex flex-col">
-          <form className="bg-white shadow-md rounded px-4">
-            <div className="mb-4">
-              <label className="block text-black">FIRST NAME
-                <input
-                  type="text"
-                  className="shadow border rounded"
-                />
-              </label>
-              <label className="block">LAST NAME
-                <input
-                  type="text"
-                  className="shadow border rounded"
-                />
-              </label>
+      <div className="main-container flex items-center justify-center h-screen">
+        <div className="bg-white p-7 rounded-xl shadow-md">
+          <h2 className="text-center p-3 mb-3">Contact Us</h2>
+          <form>
+            <div className="flex">
+              <div className="mb-4 p-2">
+                <label className="block text-black">FIRST NAME</label>
+                  <input
+                    type="text"
+                    className="shadow border rounded"
+                  />
+                
+              </div>
+              <div className="mb-4 p-2">
+                <label className="block">LAST NAME</label>
+                  <input
+                    type="text"
+                    className="shadow border rounded"
+                  />
+              </div>
             </div>
-            <label className="block">EMAIL
-              <input  
-                type="text"
-                className="shadow border rounded"
-              />
-            </label>
-            <label className="block">MESSAGE
-              <textarea
-                className="shadow border rounded"
-              />
-            </label>
-            <input type="submit" />
+            <div className="mb-4 p-2">
+              <label className="block">EMAIL</label>
+                <input  
+                  type="text"
+                  className="shadow border rounded w-full"
+                />
+            </div>
+            <div className="mb-4 p-2">
+              <label className="block">MESSAGE</label>
+                <textarea
+                  className="shadow border rounded w-full"
+                />
+            </div>
+            <div>
+              <button
+                type="submit"
+                className="p-2 bg-green-200 rounded-md w-20">
+                Submit
+              </button>
+            </div>
           </form>
         </div>
       </div>
