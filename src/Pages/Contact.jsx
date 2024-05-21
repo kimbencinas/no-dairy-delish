@@ -9,18 +9,18 @@ function Contact() {
 */
 
   return (
-    <div className="bg-gray-200">
+    <div className="bg-white">
       <Navbar />
-      <div className="main-container flex items-center justify-center h-screen">
-        <div className="bg-white p-7 rounded-xl shadow-md">
-          <h2 className="text-center p-3 mb-3">Contact Us</h2>
+      <h2 className="text-center p-3 mt-10 mb-3">Contact Us</h2>
+      <div className="main-container flex items-center justify-center">
+        <div className="bg-gray-100 p-7 rounded-xl shadow-md">
           <form>
             <div className="flex">
               <div className="mb-4 p-2">
                 <label className="block text-black">FIRST NAME</label>
                   <input
                     type="text"
-                    className="shadow border rounded"
+                    className="shadow border rounded p-1"
                   />
                 
               </div>
@@ -28,7 +28,7 @@ function Contact() {
                 <label className="block">LAST NAME</label>
                   <input
                     type="text"
-                    className="shadow border rounded"
+                    className="shadow border rounded p-1"
                   />
               </div>
             </div>
@@ -36,13 +36,13 @@ function Contact() {
               <label className="block">EMAIL</label>
                 <input  
                   type="text"
-                  className="shadow border rounded w-full"
+                  className="shadow border rounded w-full p-1"
                 />
             </div>
             <div className="mb-4 p-2">
               <label className="block">MESSAGE</label>
                 <textarea
-                  className="shadow border rounded w-full"
+                  className="shadow border rounded w-full p-1"
                 />
             </div>
             <div>
