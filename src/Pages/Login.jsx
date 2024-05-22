@@ -4,11 +4,11 @@ import Navbar from '../Components/Navbar';
 function Login() {
 
   return (
-    <div>
+    <div className="bg-gray-200 h-screen">
     <Navbar />
-    <div className="main-container flex items-center justify-center h-screen">
-        <div className="bg-green-200 p-4 rounded-xl">
-            <h2 className="text-center">Log In</h2>
+    <div className="main-container flex items-center justify-center">
+        <div className="bg-white p-10 rounded-xl shadow-md mt-60">
+            <h2 className="text-center text-2xl font-semibold">Log In</h2>
             <form>
                 <div className="mb-2 p-4">
                     <label className="text-black block">
@@ -16,7 +16,7 @@ function Login() {
                     </label>
                     <input
                         type="text"
-                        className="p-2"
+                        className="p-2 border rounded-md"
                     />
                 </div>
                 <div className="mb-2 p-4">
@@ -25,13 +25,13 @@ function Login() {
                     </label>
                     <input
                         type="password"
-                        className="p-2"
+                        className="p-2 border rounded-md"
                     />
                 </div>
                 <div className="flex justify-end">
                     <button
                         type="submit"
-                        className="bg-white p-2">
+                        className="bg-green-200 p-2 rounded-md">
                         Login
                     </button>
                 </div>
