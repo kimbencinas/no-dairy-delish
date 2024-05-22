@@ -6,27 +6,49 @@ function Signup() {
   return (
     <div className="bg-gray-200">
       <Navbar />
-      <div className="main-container flex items-center justify-center h-screen">
+      <div className="main-container flex items-center justify-center">
         <div className="bg-white p-4 rounded-xl shadow-md">
             <h2 className="text-center">Sign Up</h2>
             <form>
-                <div className="mb-2 p-4">
-                    <label className="text-black block">
-                        Username
-                    </label>
-                    <input
-                        type="text"
-                        className="p-2 border"
-                    />
+                <div className="flex">
+                    <div className="mb-2 p-4">
+                        <label className="text-black block">
+                            Name
+                        </label>
+                        <input
+                            type="text"
+                            className="p-2 border"
+                        />
+                    </div>
+                    <div className="mb-2 p-4">
+                        <label className="text-black block">
+                            Username
+                        </label>
+                        <input
+                            type="text"
+                            className="p-2 border"
+                        />
+                    </div>
                 </div>
-                <div className="mb-2 p-4">
-                    <label className="text-black block">
-                            Password
-                    </label>
-                    <input
-                        type="password"
-                        className="p-2 border"
-                    />
+                <div className="flex">
+                    <div className="mb-2 p-4">
+                        <label className="text-black block">
+                                Password
+                        </label>
+                        <input
+                            type="password"
+                            className="p-2 border"
+                        />
+                    </div>
+                    <div className="mb-2 p-4">
+                        <label className="text-black block">
+                                Confirm Password
+                        </label>
+                        <input
+                            type="password"
+                            className="p-2 border"
+                        />
+                    </div>
                 </div>
                 <div className="flex justify-end">
                     <button
