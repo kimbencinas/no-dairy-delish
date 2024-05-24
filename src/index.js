@@ -12,6 +12,9 @@ import Contact from './Pages/Contact';
 import Account from './Pages/Account';
 import Login from './Pages/Login';
 import Signup from './Pages/Signup';
+import Breakfast from './Pages/Breakfast';
+import Lunch from './Pages/Lunch';
+import Dinner from './Pages/Dinner';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +48,18 @@ const router = createBrowserRouter([
   {
     path: '/signup',
     element: <Signup />
+  },
+  {
+    path: '/breakfast',
+    element: <Breakfast />
+  },
+  {
+    path: '/lunch',
+    element: <Lunch />
+  },
+  {
+    path: '/dinner',
+    element: <Dinner />
   }
 ]);
 
