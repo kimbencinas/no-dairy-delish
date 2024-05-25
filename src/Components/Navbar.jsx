@@ -23,7 +23,7 @@ function Navbar() {
           Meals
         </button>
         {isOpen && (
-          <ul className="absolute top-10 py-3 px-6 bg-gray-100">
+          <ul className="absolute top-12 py-3 mr-4 divide-y p-1 bg-gray-100">
             <DropdownItem text="Breakfast" to="/breakfast"></DropdownItem>
             <DropdownItem text="Lunch" to="/lunch"></DropdownItem>
             <DropdownItem text="Dinner" to="/dinner"></DropdownItem>
