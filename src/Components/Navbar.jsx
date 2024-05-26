@@ -24,9 +24,15 @@ function Navbar() {
         </button>
         {isOpen && (
           <ul className="absolute top-12 py-3 mr-4 divide-y p-1 bg-gray-100">
-            <DropdownItem text="Breakfast" to="/breakfast"></DropdownItem>
-            <DropdownItem text="Lunch" to="/lunch"></DropdownItem>
-            <DropdownItem text="Dinner" to="/dinner"></DropdownItem>
+            <li>
+              <Link to="/breakfast">Breakfast</Link>
+            </li>
+            <li>
+              <Link to="/lunch">Lunch</Link>
+            </li>
+            <li>
+              <Link to="/dinner">Dinner</Link>
+            </li>
         </ul>
         )}
         <Link to="/ingredients">Ingredients</Link>
@@ -37,14 +43,6 @@ function Navbar() {
     </div>
     
   );
-}
-
-function DropdownItem(props){
-  return (
-    <li>
-      <a>{props.text}</a>
-    </li>
-  )
 }
 
 export default Navbar;
