@@ -19,11 +19,11 @@ function Navbar() {
         />
       </div>
       <div className="flex flex-row gap-5 items-end mb-1">
-        <button onClick={toggleDropdown} className="">
+        <button onClick={toggleDropdown} className="transition duration-700 ease-in-out">
           Meals
         </button>
         {isOpen && (
-          <ul className="absolute top-12 py-3 mr-4 divide-y p-1 bg-gray-100">
+          <ul className="absolute top-12 py-3 mr-4 divide-y p-1 bg-emerald-200">
             <li>
               <Link to="/breakfast">Breakfast</Link>
             </li>
