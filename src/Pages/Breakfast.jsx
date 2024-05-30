@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../Components/Navbar';
 
 function Breakfast() {
+    const [breakfastRecipe, setBreakfastRecipe] = useState([]);
+
     useEffect(() => {
         const fetchBreakfastRecipes = async () => {
             const url = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=2&include-tags=breakfast&dairyFree=true';
@@ -20,6 +22,8 @@ function Breakfast() {
                 }
                 const result = await response.json();
                 console.log(result);
+                setBreakfastRecipe(result.recipes);
+                
             } catch (error) {
                 console.error(error);
             }
@@ -30,6 +34,17 @@ function Breakfast() {
   return (
     <div>
       <Navbar />
+      <div className="container mx-auto">
+      <h2 className="font-semibold text-center text-2xl mt-10">Vegan Recipes</h2>
+        <div className="flex flex-wrap justify-center items-center gap-10 p-4">
+            {breakfastRecipe.map(recipe => (
+                <div key={recipe.id}>
+                    <h3>{recipe.title}</h3>
+                    <img src={recipe.image} alt={recipe.title} />
+                </div>
+            ))}
+        </div>
+        </div>
     </div>
   );
 }
