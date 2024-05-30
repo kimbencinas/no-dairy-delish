@@ -4,11 +4,7 @@ import Navbar from '../Components/Navbar';
 function Breakfast() {
     useEffect(() => {
         const fetchBreakfastRecipes = async () => {
-            const url = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random';
-            const queryParams = new URLSearchParams ({
-                dishType: 'breakfast',
-                dairyFree: true
-            });
+            const url = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=2&include-tags=breakfast&dairyFree=true';
             const options = {
                 method: 'GET',
                 headers: {
@@ -18,7 +14,7 @@ function Breakfast() {
             };
 
             try {
-                const response = await fetch(`${url}?${queryParams}`, options);
+                const response = await fetch(url, options);
                 if (!response.ok) {
                     throw new Error("Error");
                 }
