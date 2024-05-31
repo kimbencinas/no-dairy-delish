@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Search from './Search'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,11 +13,7 @@ function Navbar() {
   <div className="flex flex-row bg-emerald-200 p-3 justify-center gap-80">
       <div className="flex gap-2">
         <Link to="/" className="mt-1">NoDairyDelish</Link>
-        <input
-            type="text"
-            placeholder="Search..."
-            className="rounded-xl p-1 focus:outline-none focus:ring focus-border-purple-500 w-72"
-        />
+        <Search />
       </div>
       <div className="flex flex-row gap-5 items-end mb-1">
         <button onClick={toggleDropdown} className="transition duration-700 ease-in-out">
