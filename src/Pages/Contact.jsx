@@ -16,7 +16,7 @@ function Contact() {
       message: '',
     },
     onSubmit: values => {
-      alert(JSON.stringify(values, null))
+      alert(JSON.stringify(values, null, 2))
     },
   });
 
