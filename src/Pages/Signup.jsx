@@ -1,7 +1,19 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
+import { useFormik } from 'formik';
 
 function Signup() {
+    const formik = useFormik({
+        initialValues: {
+            email: '',
+            username: '',
+            password: '',
+            confirmPassword: '',
+        },
+        onSubmit: values => {
+            alert(JSON.stringify(values, null,2));
+    },
+});
 
   return (
     <div className="bg-gray-200 h-screen">
@@ -9,14 +21,18 @@ function Signup() {
       <div className="main-container flex justify-center">
         <div className="bg-white p-4 rounded-xl shadow-md mt-60 px-10 py-14">
             <h2 className="text-center text-2xl font-semibold mb-5">Sign Up</h2>
-            <form>
+            <form onSubmit={formik.handleSubmit}>
                 <div className="flex">
                     <div className="mb-1 p-3">
                         <label className="text-black block">
-                            Name
+                            Email
                         </label>
                         <input
-                            type="text"
+                            id="email"
+                            name="email"
+                            type="email"
+                            value={formik.values.name}
+                            onChange={formik.handleChange}
                             className="p-2 border rounded-md"
                         />
                     </div>
@@ -25,7 +41,11 @@ function Signup() {
                             Username
                         </label>
                         <input
+                            id="username"
+                            name="username"
                             type="text"
+                            value={formik.values.username}
+                            onChange={formik.handleChange}
                             className="p-2 border rounded-md"
                         />
                     </div>
@@ -36,7 +56,11 @@ function Signup() {
                                 Password
                         </label>
                         <input
+                            id="password"
+                            name="password"
                             type="password"
+                            value={formik.values.password}
+                            onChange={formik.handleChange}
                             className="p-2 border rounded-md"
                         />
                     </div>
@@ -45,7 +69,11 @@ function Signup() {
                                 Confirm Password
                         </label>
                         <input
-                            type="password"
+                             id="confirmPassword"
+                             name="confirmPassword"
+                             type="password"
+                             value={formik.values.confirmPassword}
+                             onChange={formik.handleChange}
                             className="p-2 border rounded-md w-full"
                         />
                     </div>
