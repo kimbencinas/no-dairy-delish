@@ -1,7 +1,7 @@
-    import React, { useState, useEffect } from 'react';
+    import React, { useState } from 'react';
 
     function Search() {
-        const [recipe, setRecipe] = useState([]);
+        const [recipes, setRecipes] = useState([]);
         const [query, setQuery] = useState('');
 
         const searchRecipes = async () => {
@@ -21,8 +21,7 @@
                 }
                 const result = await response.json();
                 console.log(result);
-                setRecipe(result.results);
-                    
+                setRecipes(result.results || []); 
             } catch (error) {
                 console.error(error);
             }
@@ -37,11 +36,16 @@
 
     return (
         <div>
-            <input
-                type="text"
-                placeholder="Search..."
-                className="rounded-xl p-1 focus:outline-none focus:ring focus-border-purple-500 w-72"
-            />
+            <form onSubmit={handleSearch}>
+                <input
+                    type="text"
+                    value={query}
+                    onChange={handleChange}
+                    placeholder="Search..."
+                    className="rounded-xl p-1 focus:outline-none focus:ring focus-border-purple-500 w-72"
+                />
+                <button type="submit">Search</button>
+            </form>
         </div>
     )
 }
