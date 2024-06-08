@@ -1,38 +1,41 @@
-    import React, { useState } from 'react';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
-    function Search() {
-        const [recipes, setRecipes] = useState([]);
-        const [query, setQuery] = useState('');
 
-        const searchRecipes = async () => {
-            const url = `https://api.spoonacular.com/recipes/complexSearch?query=${query}`;
-            const options = {
-                method: 'GET',
-                headers: {
-                'X-RapidAPI-Key': '46bdcb908amsh37465532556edf5p168cafjsn62a83629af8d',
-                'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'  
-                }
-            };
+function Search() {
+    const [recipes, setRecipes] = useState([]);
+    const [query, setQuery] = useState('');
 
-            try {
-                const response = await fetch(url, options);
-                if (!response.ok) {
-                    throw new Error("Error");
-                }
-                const result = await response.json();
-                console.log(result);
-                setRecipes(result.results || []); 
-            } catch (error) {
-                console.error(error);
+    const searchRecipes = async () => {
+        const url = `https://api.spoonacular.com/recipes/complexSearch?query=${query}`;
+        const options = {
+            method: 'GET',
+            headers: {
+            'X-RapidAPI-Key': '46bdcb908amsh37465532556edf5p168cafjsn62a83629af8d',
+            'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'  
             }
         };
-        const handleChange = (e) => {
-            setQuery(e.target.value);
-        };
-        const handleSearch = (e) => {
-            e.preventDefault();
-            searchRecipes();
-        };
+
+        try {
+            const response = await fetch(url, options);
+            if (!response.ok) {
+                throw new Error("Error");
+            }
+            const result = await response.json();
+            console.log(result);
+            setRecipes(result.results || []); 
+        } catch (error) {
+            console.error(error);
+        }
+    };
+    const handleChange = (e) => {
+        setQuery(e.target.value);
+    };
+    const handleSearch = (e) => {
+        e.preventDefault();
+        searchRecipes();
+    };
 
     return (
         <div>
@@ -45,6 +48,7 @@
                     className="rounded-xl p-1 focus:outline-none focus:ring focus-border-purple-500 w-72"
                 />
                 <button type="submit">Search</button>
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
             </form>
         </div>
     )

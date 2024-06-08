@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Search from './Search'
+import Search from './Search';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Navbar({ onSearch }) {
   const [isOpen, setIsOpen] = useState(false);
