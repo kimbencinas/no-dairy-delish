@@ -43,7 +43,10 @@ function App() {
           <h2 className="text-center text-3xl font-bold">Recipes</h2>
           <div className="flex gap-4">
             {recipeList.map(recipe => (
-                <p key={recipe.id}>{recipe.name}</p>
+                <div key={recipe.id}>
+                  <h3>{recipe.name}</h3>
+                  <img src={recipe.thumbnail_url} alt={recipe.thumbnail_alt_text} />
+                </div>
             ))}
           </div>
         </div>
