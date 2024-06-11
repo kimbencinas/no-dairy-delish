@@ -47,8 +47,9 @@ function Search() {
                     placeholder="Search..."
                     className="rounded-xl p-1 focus:outline-none focus:ring focus-border-purple-500 w-72"
                 />
-                <button type="submit">Search</button>
-                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                <button type="submit" className="transform -translate-x-6">
+                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                </button>
             </form>
         </div>
     )
