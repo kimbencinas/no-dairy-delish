@@ -33,7 +33,6 @@ function Navbar({ onSearch }) {
             </li>
         </ul>
         )}
-        <Link to="/ingredients">Ingredients</Link>
         <Link to="/about">About Us</Link>
         <Link to="/contact">Contact Us</Link>
         <Link to="/account">Account</Link>
