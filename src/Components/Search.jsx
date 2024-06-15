@@ -3,20 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 
-function Search() {
-    const [recipes, setRecipes] = useState([]);
+function Search({ onSearch }) {
     const [query, setQuery] = useState('');
 
     const searchRecipes = async () => {
-        const url = `https://api.spoonacular.com/recipes/complexSearch?query=${query}`;
+        const apiKey = process.env.REACT_APP_SPOONACULAR_API_KEY;
+        const url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${query}&intolerances=dairy&number=4&ranking=2`;
         const options = {
             method: 'GET',
             headers: {
-            'X-RapidAPI-Key': '46bdcb908amsh37465532556edf5p168cafjsn62a83629af8d',
-            'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'  
+                'x-rapidapi-key': '46bdcb908amsh37465532556edf5p168cafjsn62a83629af8d',
+                'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
             }
-        };
-
+        }
         try {
             const response = await fetch(url, options);
             if (!response.ok) {
@@ -24,7 +23,7 @@ function Search() {
             }
             const result = await response.json();
             console.log(result);
-            setRecipes(result.results || []); 
+            onSearch(result.results); 
         } catch (error) {
             console.error(error);
         }

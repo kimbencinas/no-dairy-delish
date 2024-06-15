@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Components/Navbar';
+import Results from './Pages/Results';
 import './App.css';
 
 function App() {
   const [recipeList, setRecipeList] = useState([]);
+  const [searchResult, setSearchResult] = useState([]);
   
   useEffect(() => {
       const recipeData = async () => {
@@ -35,10 +37,17 @@ function App() {
       recipeData();
   }, []);
 
+  const handleSearchResult = (results) => {
+    setSearchResult(results);
+  };
+
   return (
     <div>
-      <Navbar />
-      <div className="flex flex-col justify-center items-center mt-20">
+      <Navbar onSearch={handleSearchResult} />
+      {searchResult.length > 0 ? (
+        <Results recipes={searchResult} />
+      ) : (
+        <div className="flex flex-col justify-center items-center mt-20">
         <div className="flex flex-col gap-6">
           <h2 className="text-center text-3xl font-bold">Recipes</h2>
           <div className="flex gap-4">
@@ -51,6 +60,7 @@ function App() {
           </div>
         </div>
        </div>
+      )}
     </div>
   );
 }
