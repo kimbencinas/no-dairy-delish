@@ -6,15 +6,11 @@ function Results({ recipes, recipeItem}) {
 
   return (
     <div>
-      {recipes.length > 0 ? (
-        recipes.map((recipeItem) => (
+        {recipes.map((recipeItem) => (
           <div key={recipeItem.id}>
             <h2>{recipeItem.title}</h2>
           </div>
-        ))
-        ) : (
-          <p>Recipe not found.</p>
-      )}
+        ))}
     </div>
   );
 }

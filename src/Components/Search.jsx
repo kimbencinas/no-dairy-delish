@@ -29,9 +29,7 @@ function Search() {
             console.error(error);
         }
     };
-    const handleChange = (e) => {
-        setQuery(e.target.value);
-    };
+
     const handleSearch = (e) => {
         e.preventDefault();
         searchRecipes();
@@ -43,11 +41,11 @@ function Search() {
                 <input
                     type="text"
                     value={query}
-                    onChange={handleChange}
+                    onChange={(e) => setQuery(e.target.value)}
                     placeholder="Search..."
                     className="rounded-xl p-1 focus:outline-none focus:ring focus-border-purple-500 w-72"
                 />
-                <button type="submit" className="transform -translate-x-6">
+                <button onClick={searchRecipes} type="submit" className="transform -translate-x-6">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>
             </form>
