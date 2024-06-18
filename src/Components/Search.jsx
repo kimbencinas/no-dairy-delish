@@ -5,6 +5,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 function Search({ onSearch }) {
     const [query, setQuery] = useState('');
+    const [recipeResult, setRecipeResult] = useState('');
 
     const searchRecipes = async () => {
         const apiKey = process.env.REACT_APP_SPOONACULAR_API_KEY;
