@@ -6,7 +6,6 @@ function Results({ recipes, recipeItem}) {
 
   return (
     <div>
-      <Navbar />
       <div className="flex flex-col justify-center items-center mt-20">
         <div className="flex flex-col gap-6">
           <h2 className="text-center text-3xl font-bold">Search Results</h2>
