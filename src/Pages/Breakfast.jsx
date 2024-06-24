@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Components/Navbar';
-import RecipeCard from '../Components/Recipecard';
 
 function Breakfast() {
     const [breakfastRecipe, setBreakfastRecipe] = useState([]);
@@ -36,14 +35,13 @@ function Breakfast() {
     <div>
       <Navbar />
       <div className="container mx-auto">
-      <h2 className="font-semibold text-center text-2xl mt-10">Vegan Recipes</h2>
+      <h2 className="font-semibold text-center text-2xl mt-10">Breakfast Recipes</h2>
         <div className="flex flex-wrap justify-center items-center gap-10 p-4">
             {breakfastRecipe.map(recipe => (
-                <RecipeCard
-                    key={recipe.id}>
-                    recipeImg={recipe.image}
-                    recipeTitle={recipe.title}
-                />
+                <div key={recipe.id}>
+                    <h3>{recipe.title}</h3>
+                    <img src={recipe.image} alt={recipe.title} />
+                </div>
             ))}
             </div>
         </div>
