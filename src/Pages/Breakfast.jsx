@@ -38,9 +38,9 @@ function Breakfast() {
       <h2 className="font-semibold text-center text-2xl mt-10">Breakfast Recipes</h2>
         <div className="flex flex-wrap justify-center items-center gap-10 p-4">
             {breakfastRecipe.map(recipe => (
-                <div key={recipe.id}>
-                    <h3>{recipe.title}</h3>
-                    <img src={recipe.image} alt={recipe.title} />
+                <div key={recipe.id} className="p-4 rounded-xl shadow-md">
+                    <img src={recipe.image} alt={recipe.title} className="h-48 object-cover" />
+                    <h3 className="font-bold text-lg text-gray-800 mb-4">{recipe.title}</h3>
                 </div>
             ))}
             </div>
