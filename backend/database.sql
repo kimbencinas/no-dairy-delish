@@ -1,4 +1,4 @@
-CREATE DATABASE nodairydelish;
+CREATE DATABASE no_dairy_delish;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
