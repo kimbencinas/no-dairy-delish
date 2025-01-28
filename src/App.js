@@ -50,11 +50,11 @@ function App() {
         <div className="flex flex-col justify-center items-center mt-20">
         <div className="flex flex-col gap-6">
           <h2 className="text-center text-3xl font-bold">Recipes</h2>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap justify-center items-center gap-10 p-4">
             {recipeList.map(recipe => (
-                <div key={recipe.id}>
-                  <h3>{recipe.name}</h3>
-                  <img src={recipe.thumbnail_url} alt={recipe.thumbnail_alt_text} />
+                <div key={recipe.id} className="p-4 rounded-xl shadow-md">
+                  <img src={recipe.thumbnail_url} alt={recipe.thumbnail_alt_text} className="h-48 object-cover" />
+                  <h3 className="font-bold text-lg text-gray-800 mb-4 text-wrap">{recipe.name}</h3>
                 </div>
             ))}
           </div>
