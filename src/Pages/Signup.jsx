@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
 import { useFormik } from 'formik';
+import axios from 'axios';
 
 function Signup() {
     const formik = useFormik({
@@ -10,8 +11,22 @@ function Signup() {
             password: '',
             confirmPassword: '',
         },
-        onSubmit: values => {
-            alert(JSON.stringify(values, null,2));
+        onSubmit: async (values) => {
+            if (values.password !== values.confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+            try {
+                const response = await axios.post('http://localhost:5000/signup', {
+                    username: values.username,
+                    email: values.email,
+                    password: values.password,
+                });
+                alert(response.data.message);
+            } catch (error) {
+                console.error(error.response.data);
+                alert(error.response.data.message);
+            }
     },
 });
 
