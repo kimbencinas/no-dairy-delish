@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Components/Navbar';
 import { useFormik } from 'formik';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function Signup() {
     const formik = useFormik({
@@ -101,6 +102,7 @@ function Signup() {
                     </button>
                 </div>
             </form>
+            <span>Already have an account? <Link to="/contact" className="text-green-400">Sign In</Link></span>
         </div>
     </div>
     </div>
