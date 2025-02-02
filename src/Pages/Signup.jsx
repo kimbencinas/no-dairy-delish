@@ -38,7 +38,7 @@ function Signup() {
         <div className="bg-white p-4 rounded-xl shadow-md mt-60 px-10 py-14">
             <h2 className="text-center text-2xl font-semibold mb-5">Sign Up</h2>
             <form onSubmit={formik.handleSubmit}>
-                <div className="flex">
+                <div className="">
                     <div className="mb-1 p-3">
                         <label className="text-black block">
                             Email
@@ -66,7 +66,7 @@ function Signup() {
                         />
                     </div>
                 </div>
-                <div className="flex">
+                <div className="">
                     <div className="mb-4 p-3">
                         <label className="text-black block">
                                 Password
