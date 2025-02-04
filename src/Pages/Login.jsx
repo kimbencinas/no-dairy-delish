@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
 import { useFormik } from 'formik'; 
+import { Link } from 'react-router-dom'
 
 function Login() {
     const formik = useFormik({
@@ -54,6 +55,7 @@ function Login() {
                     </button>
                 </div>
             </form>
+            <span>Don't have an account? <Link to="/signup" className="text-green-400">Sign up</Link></span>
         </div>
     </div>
     </div>
