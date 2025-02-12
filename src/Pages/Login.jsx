@@ -50,7 +50,7 @@ function Login() {
                 <div className="flex justify-end">
                     <button
                         type="submit"
-                        className="bg-green-200 p-2 rounded-md">
+                        className="bg-green-200 p-2 mb-2 rounded-md">
                         Login
                     </button>
                 </div>
