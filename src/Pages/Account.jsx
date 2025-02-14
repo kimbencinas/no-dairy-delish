@@ -6,6 +6,10 @@ function Account() {
   return (
     <div>
       <Navbar />
+      <h1>Account</h1>
+      <p>Change username</p>
+      <p>Change password</p>
+      <p>Delete account</p>
     </div>
   );
 }
