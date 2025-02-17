@@ -10,6 +10,7 @@ function Account() {
       <p>Change username</p>
       <p>Change password</p>
       <p>Delete account</p>
+      <p>Favorites</p>
     </div>
   );
 }
