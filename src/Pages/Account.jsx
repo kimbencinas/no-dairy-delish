@@ -7,10 +7,17 @@ function Account() {
     <div>
       <Navbar />
       <h1>Account</h1>
-      <p>Change username</p>
-      <p>Change password</p>
-      <p>Delete account</p>
-      <p>Favorites</p>
+      <div className="account-settings">
+        <h2>Account Settings</h2>
+        <p>Email address</p>
+        <p>Password</p>
+        <p>Notification settings</p>
+      </div>
+      <div className="account-info">
+        <h2>Danger Zone</h2>
+        <p>Delete account</p>
+      </div>
+      <p>Sign Out</p>
     </div>
   );
 }
