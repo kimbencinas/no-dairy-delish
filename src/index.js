@@ -15,6 +15,7 @@ import Signup from './Pages/Signup';
 import Breakfast from './Pages/Breakfast';
 import Lunch from './Pages/Lunch';
 import Dinner from './Pages/Dinner';
+import ResetPassword from './Pages/ResetPassword';
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
   {
     path: '/dinner',
     element: <Dinner />
+  },
+  {
+    path: '/reset-password',
+    element: <ResetPassword />
   }
 ]);
 
