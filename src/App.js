@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Components/Navbar';
 import Results from './Pages/Results';
+import Footer from './Components/Footer';
 import './App.css';
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="relative min-h-screen">
       <Navbar onSearch={handleSearchResult} />
       {searchResult.length > 0 ? (
         <Results recipes={searchResult} />
@@ -61,6 +62,7 @@ function App() {
         </div>
        </div>
       )}
+      <Footer />
     </div>
   );
 }
