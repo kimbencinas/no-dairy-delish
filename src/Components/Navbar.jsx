@@ -11,9 +11,9 @@ function Navbar({ onSearch }) {
   };
 
   return (
-  <div className="flex flex-row bg-emerald-200 p-3 justify-center gap-80">
-      <div className="flex gap-2">
-        <Link to="/" className="mt-1">NoDairyDelish</Link>
+  <div className="flex flex-row shadow-md p-3 justify-center gap-80">
+      <div className="flex gap-8">
+        <Link to="/" className="mt-1 text-lg font-bold">NoDairyDelish</Link>
         <Search onSearch={onSearch} />
       </div>
       <div className="flex flex-row gap-5 items-end mb-1">

@@ -43,7 +43,7 @@ function Search({ onSearch }) {
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Search..."
-                    className="rounded-xl p-1 focus:outline-none focus:ring focus-border-purple-500 w-72"
+                    className="rounded-xl p-1 outline outline-1 outline-gray-400 focus:ring focus-border-purple-500 w-72"
                 />
                 <button onClick={searchRecipes} type="submit" className="transform -translate-x-6">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
